@@ -177,6 +177,208 @@ canvas {
   }
 }
 
+/* ---------- 支持页 ---------- */
+.support-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(121, 145, 255, 0.12), transparent 32rem),
+    radial-gradient(circle at 94% 18%, rgba(133, 225, 207, 0.1), transparent 30rem),
+    #f7f8fc;
+  color: #151722;
+  font-family: 'Helvetica Neue', 'Chiron GoRound TC', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
+  padding: clamp(1.25rem, 4vw, 3.5rem) 1.25rem 2.5rem;
+}
+
+.support-shell {
+  width: min(100%, 62rem);
+  margin: 0 auto;
+}
+
+.support-back {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid rgba(21, 23, 34, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 0.5rem 1.5rem rgba(21, 23, 34, 0.08);
+  color: #151722;
+  text-decoration: none;
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+.support-back:hover {
+  transform: translateX(-0.2rem);
+  background: #fff;
+}
+
+.support-back span {
+  margin-top: -0.25rem;
+  font-size: 2.3rem;
+  line-height: 1;
+}
+
+.support-header {
+  max-width: 42rem;
+  padding: clamp(2.5rem, 9vw, 6.5rem) 0 clamp(2rem, 6vw, 4rem);
+}
+
+.support-kicker,
+.support-eyebrow {
+  color: #6375e9;
+  font-size: 0.77rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.support-header h1 {
+  margin-top: 0.9rem;
+  font-size: clamp(2.7rem, 8vw, 5.5rem);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+.support-header > p:last-child {
+  max-width: 32rem;
+  margin-top: 1.4rem;
+  color: #636979;
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  line-height: 1.7;
+}
+
+.support-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(15rem, 22rem);
+  align-items: center;
+  gap: clamp(1.5rem, 5vw, 4rem);
+  margin-top: 1.15rem;
+  padding: clamp(1.35rem, 4vw, 2.4rem);
+  border: 1px solid rgba(21, 23, 34, 0.08);
+  border-radius: 1.75rem;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 1.2rem 3rem rgba(21, 23, 34, 0.06);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.support-card h2 {
+  margin-top: 0.6rem;
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  letter-spacing: -0.03em;
+}
+
+.support-card-copy > p:last-child {
+  max-width: 30rem;
+  margin-top: 0.75rem;
+  color: #6b7080;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.support-discord-link,
+.support-email-link {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  min-height: 4rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid rgba(99, 117, 233, 0.2);
+  border-radius: 1.1rem;
+  background: rgba(255, 255, 255, 0.72);
+  color: #202333;
+  font-size: 1.08rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.support-discord-link:hover,
+.support-email-link:hover {
+  transform: translateY(-0.15rem);
+  border-color: rgba(99, 117, 233, 0.5);
+  box-shadow: 0 0.75rem 1.5rem rgba(99, 117, 233, 0.14);
+}
+
+.support-discord-icon {
+  width: 2rem;
+  height: 2rem;
+  color: #5865f2;
+  flex: 0 0 auto;
+}
+
+.support-mail-icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  color: #6375e9;
+  flex: 0 0 auto;
+}
+
+.support-link-arrow {
+  margin-left: auto;
+  color: #8c93a4;
+  font-size: 1.35rem;
+}
+
+.support-wechat {
+  align-items: start;
+}
+
+.support-qr-wrap {
+  display: grid;
+  justify-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-radius: 1.3rem;
+  background: rgba(249, 250, 253, 0.9);
+}
+
+.support-qr {
+  display: block;
+  width: min(100%, 17rem);
+  aspect-ratio: 1;
+  border-radius: 0.9rem;
+  box-shadow: 0 0.5rem 1.25rem rgba(21, 23, 34, 0.1);
+}
+
+.support-qr-wrap p {
+  color: #747b8b;
+  font-size: 0.87rem;
+}
+
+.support-footer {
+  padding: 2rem 0 0.5rem;
+  color: #949aaa;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .support-page {
+    padding-inline: 1rem;
+  }
+
+  .support-card {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    border-radius: 1.35rem;
+  }
+
+  .support-discord-link,
+  .support-email-link {
+    width: 100%;
+  }
+
+  .support-qr-wrap {
+    justify-self: stretch;
+  }
+
+  .support-qr {
+    width: min(100%, 18rem);
+  }
+}
+
 /* ---------- 首屏装饰画框 + 角标元数据 ---------- */
 .hero-chrome {
   --m: clamp(16px, 2.4vh, 30px);
