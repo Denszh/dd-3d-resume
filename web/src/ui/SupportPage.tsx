@@ -1,4 +1,5 @@
 import type { SVGProps } from 'react'
+import { useState } from 'react'
 
 function DiscordIcon(props: SVGProps<SVGSVGElement>) {
   return (
@@ -21,24 +22,36 @@ function MailIcon(props: SVGProps<SVGSVGElement>) {
 }
 
 export default function SupportPage() {
+  const [language, setLanguage] = useState<'zh' | 'en'>(() =>
+    navigator.language.toLowerCase().startsWith('zh') ? 'zh' : 'en',
+  )
+  const copy = language === 'zh'
+
   return (
-    <main className="support-page">
+    <main className="support-page" lang={copy ? 'zh-Hans' : 'en'}>
       <div className="support-shell">
-        <a className="support-back" href="/" aria-label="返回主页">
+        <div className="support-topbar">
+          <a className="support-back" href="/" aria-label={copy ? '返回主页' : 'Back to home'}>
           <span aria-hidden="true">‹</span>
-        </a>
+          </a>
+          <div className="support-language" aria-label={copy ? '选择语言' : 'Choose language'}>
+            <button type="button" aria-pressed={copy} onClick={() => setLanguage('zh')}>中文</button>
+            <span aria-hidden="true">/</span>
+            <button type="button" aria-pressed={!copy} onClick={() => setLanguage('en')}>EN</button>
+          </div>
+        </div>
 
         <header className="support-header">
           <p className="support-kicker">DENGZH.SITE / SUPPORT</p>
-          <h1>联系我们</h1>
-          <p>遇到问题，或想分享你的想法？我们很乐意听到你的声音。</p>
+          <h1>{copy ? '联系我们' : 'Contact us'}</h1>
+          <p>{copy ? '遇到问题，或想分享你的想法？我们很乐意听到你的声音。' : 'Need help or want to share an idea? We’d love to hear from you.'}</p>
         </header>
 
         <section className="support-card support-community" aria-labelledby="community-title">
           <div className="support-card-copy">
-            <p className="support-eyebrow">社区支持</p>
-            <h2 id="community-title">加入 Discord 社区</h2>
-            <p>获取使用帮助、产品更新和创作技巧，也可以和其他用户交流。</p>
+            <p className="support-eyebrow">{copy ? '社区支持' : 'COMMUNITY'}</p>
+            <h2 id="community-title">{copy ? '加入 Discord 社区' : 'Join the Discord community'}</h2>
+            <p>{copy ? '获取使用帮助、产品更新和创作技巧，也可以和其他用户交流。' : 'Get help, product updates, and creative tips — and meet other users.'}</p>
           </div>
           <a
             className="support-discord-link"
@@ -47,37 +60,40 @@ export default function SupportPage() {
             rel="noreferrer"
           >
             <DiscordIcon className="support-discord-icon" />
-            <span>加入 Discord</span>
+            <span>{copy ? '加入 Discord' : 'Join Discord'}</span>
             <span className="support-link-arrow" aria-hidden="true">↗</span>
           </a>
         </section>
 
         <section className="support-card support-wechat" aria-labelledby="wechat-title">
           <div className="support-card-copy">
-            <p className="support-eyebrow">微信交流群</p>
-            <h2 id="wechat-title">加入星拾会员群</h2>
-            <p>使用微信扫描二维码加入正式群聊。二维码有效期有限，失效后请回到此页面获取最新二维码。</p>
+            <p className="support-eyebrow">{copy ? '微信交流群' : 'WECHAT COMMUNITY'}</p>
+            <h2 id="wechat-title">{copy ? '加入星拾会员群' : 'Join the Starift WeChat group'}</h2>
+            <p>{copy ? '使用微信扫描二维码加入正式群聊。二维码有效期有限，失效后请回到此页面获取最新二维码。' : 'Scan the QR code with WeChat to join the community. The code expires; return here for an updated one if needed.'}</p>
           </div>
           <div className="support-qr-wrap">
             <img src="/support/wechat-group.png" alt="星拾会员群微信二维码" className="support-qr" />
-            <p>星拾会员群 · 正式群聊</p>
+            <p>{copy ? '星拾会员群 · 正式群聊' : 'Starift community · Official group'}</p>
           </div>
         </section>
 
         <section className="support-card support-email" aria-labelledby="email-title">
           <div className="support-card-copy">
-            <p className="support-eyebrow">邮件联系</p>
-            <h2 id="email-title">需要进一步帮助？</h2>
-            <p>如果你遇到账号、订阅或使用问题，可以直接发邮件给我们。</p>
+            <p className="support-eyebrow">{copy ? '邮件联系' : 'EMAIL SUPPORT'}</p>
+            <h2 id="email-title">{copy ? '需要进一步帮助？' : 'Need more help?'}</h2>
+            <p>{copy ? '如果你遇到账号、订阅或使用问题，可以直接发邮件给我们。' : 'For help with subscriptions or using the app, email our support team.'}</p>
           </div>
-          <a className="support-email-link" href="mailto:support@easyai-picture.com">
+          <a className="support-email-link" href="mailto:starift-support@dengzh.site">
             <MailIcon className="support-mail-icon" />
-            <span>support@easyai-picture.com</span>
+            <span>starift-support@dengzh.site</span>
             <span className="support-link-arrow" aria-hidden="true">↗</span>
           </a>
         </section>
 
-        <footer className="support-footer">© {new Date().getFullYear()} 星拾 · dengzh.site</footer>
+        <footer className="support-footer">
+          <a href="/privacy">{copy ? '隐私政策' : 'Privacy Policy'}</a>
+          <span>© {new Date().getFullYear()} Starift · dengzh.site</span>
+        </footer>
       </div>
     </main>
   )

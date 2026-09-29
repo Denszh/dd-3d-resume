@@ -194,6 +194,38 @@ canvas {
   margin: 0 auto;
 }
 
+.support-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.support-language {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.75rem;
+  border: 1px solid rgba(21, 23, 34, 0.1);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  color: #858b9a;
+  font-size: 0.82rem;
+}
+
+.support-language button {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.support-language button[aria-pressed='true'] {
+  color: #3867ed;
+  font-weight: 700;
+}
+
 .support-back {
   display: grid;
   place-items: center;
@@ -348,10 +380,53 @@ canvas {
 }
 
 .support-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.65rem 1.1rem;
   padding: 2rem 0 0.5rem;
   color: #949aaa;
   font-size: 0.8rem;
   text-align: center;
+}
+
+.support-footer a,
+.privacy-card a {
+  color: #3867ed;
+  text-decoration: none;
+}
+
+.privacy-header {
+  padding-bottom: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.privacy-card {
+  display: block;
+  max-width: 52rem;
+  margin-inline: auto;
+}
+
+.privacy-card h2 {
+  margin: 2rem 0 0.55rem;
+  font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+  letter-spacing: -0.02em;
+}
+
+.privacy-card h2:first-of-type {
+  margin-top: 0;
+}
+
+.privacy-card p {
+  color: #555d6f;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.privacy-card .privacy-updated {
+  margin-bottom: 1.5rem;
+  color: #838a99;
+  font-size: 0.9rem;
 }
 
 @media (max-width: 700px) {
@@ -377,6 +452,74 @@ canvas {
   .support-qr {
     width: min(100%, 18rem);
   }
+}
+
+/* Public root page: keep the public domain neutral while the portfolio is private. */
+.public-home {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  color: #151722;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(125, 151, 255, 0.2), transparent 38%),
+    radial-gradient(circle at 85% 90%, rgba(199, 173, 255, 0.2), transparent 36%),
+    #f7f8fc;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", sans-serif;
+}
+
+.public-home-card {
+  width: min(100%, 36rem);
+  padding: clamp(2.25rem, 7vw, 4.5rem);
+  text-align: center;
+  border: 1px solid rgba(20, 27, 50, 0.1);
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 24px 80px rgba(57, 68, 107, 0.13);
+  backdrop-filter: blur(24px);
+}
+
+.public-home-kicker {
+  margin: 0;
+  color: #6a78aa;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.public-home h1 {
+  margin: 0.8rem 0 0;
+  font-size: clamp(2.2rem, 8vw, 4.2rem);
+  line-height: 1;
+  letter-spacing: -0.06em;
+}
+
+.public-home-copy {
+  margin: 1.4rem auto 0;
+  max-width: 21rem;
+  color: #62697b;
+  font-size: clamp(1rem, 2.8vw, 1.15rem);
+  line-height: 1.7;
+}
+
+.public-home-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 2rem;
+  padding: 0.85rem 1.15rem;
+  border-radius: 999px;
+  color: #fff;
+  background: #3867ed;
+  font-size: 0.95rem;
+  font-weight: 650;
+  text-decoration: none;
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+.public-home-link:hover {
+  background: #2d57d2;
+  transform: translateY(-1px);
 }
 
 /* ---------- 首屏装饰画框 + 角标元数据 ---------- */
