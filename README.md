@@ -45,8 +45,8 @@
 前端应用整个在 [`web/`](web) 下，**下文提到的代码 / 资源路径都相对 `web/`**（如 `src/App.tsx` 即 `web/src/App.tsx`），npm 命令也在 `web/` 里执行。
 
 ```bash
-git clone https://github.com/dayinji/sen-3d-resume.git
-cd sen-3d-resume/web
+git clone https://github.com/Denszh/dd-3d-resume.git
+cd dd-3d-resume/web
 npm install
 npm run dev        # 开发 http://localhost:5173
 ```

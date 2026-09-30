@@ -45,8 +45,8 @@ Even on the source route, intro3d doubles as a **visual glb exporter**: skip Ble
 The whole front-end app lives under [`web/`](web). **Every code / asset path below is relative to `web/`** (e.g. `src/App.tsx` means `web/src/App.tsx`), and npm commands run inside `web/`.
 
 ```bash
-git clone https://github.com/dayinji/sen-3d-resume.git
-cd sen-3d-resume/web
+git clone https://github.com/Denszh/dd-3d-resume.git
+cd dd-3d-resume/web
 npm install
 npm run dev        # dev at http://localhost:5173
 ```
