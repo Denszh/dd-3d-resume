@@ -1,9 +1,9 @@
-// 作品集数据（双语）。5 大板块 → 点击展开作品详情。
+// 作品集数据（双语）。板块 → 点击展开作品详情。
 // 纯数据驱动：增删板块 / 作品只改本文件，Works.jsx 仅负责渲染。
 //
 // 板块字段：
 //   id        唯一标识（用于 framer layoutId 共享元素动画）
-//   no        编号 '01'…'05'
+//   no        编号 '01'…'02'
 //   title     板块标题
 //   tagline   索引行右侧一句话
 //   items[]   扁平作品列表：{ name, meta?, tags?, link? }
@@ -65,66 +65,41 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
     countLabel: (n) => `${n} 件作品`,
     sections: [
       {
-        id: 'ad',
+        id: 'easyai',
         no: '01',
-        title: '广告项目',
-        tagline: '坏打印机工作室',
+        title: 'EasyAI',
+        tagline: 'AI 图像 · 面向全球',
         items: [
-          { name: '谁在弹古琴', meta: '互动项目', slug: 'guqin' },
-          { name: '新加坡联合早报 · 校园时光机', meta: '互动项目', slug: 'time-machine' },
-          { name: '动画合集', meta: '动画', slug: 'animation-collection' },
-          { name: '其他作品', slug: 'other-works' },
+          {
+            name: 'EasyAI Picture',
+            meta: 'AI 图片生成网站',
+            tags: ['Web', '海外市场'],
+            link: 'https://easyai-picture.com/',
+            slug: 'easyai-picture',
+          },
+          {
+            name: 'EasyAI: AI Images',
+            meta: 'iOS App · 已上架 App Store',
+            tags: ['iOS', 'App Store'],
+            slug: 'easyai-ios',
+          },
         ],
-        awards: ['虎啸奖', 'FWA', 'Awwwards'],
+        footer: '市场与竞品分析 · 产品规划 · UI/UX · 前后端开发 · AI 接入 · 定价商业化 · SEO 与增长',
       },
       {
-        id: 'maker',
+        id: 'starift',
         no: '02',
-        title: '自媒体',
-        tagline: '23 万关注 ｜ 年更博主',
+        title: '星拾 Starift',
+        tagline: '语音优先 · 本地优先',
         items: [
           {
-            name: '我把工作室的玻璃墙改造成了游戏机',
-            meta: '1700 万 播放',
-            tags: ['B站每周必看', 'B站热搜'],
-            slug: 'glass-wall-arcade',
+            name: '星拾 · Starift',
+            meta: '个人灵感捕捉 App · iOS',
+            tags: ['iOS', '语音优先', '本地优先'],
+            slug: 'starift',
           },
-          {
-            name: '我把代码写入狗狗的衣服里',
-            meta: '900 万 播放',
-            tags: ['微博 / 抖音 / B站 三平台热搜榜'],
-            slug: 'dog-code-clothes',
-          },
-          {
-            name: '我把 Switch 放大十倍，做成了智能猫窝',
-            meta: '500 万 播放',
-            tags: ['B站每周必看'],
-            slug: 'switch-cat-house',
-          },
-          { name: '我们在80年代的红白机游戏里结婚啦！！', slug: 'retro-game-wedding' },
         ],
-        footer: '3D 建模 · 3D 打印 · PCB 设计 · 嵌入式开发 · 软件开发 · 动画包装',
-      },
-      {
-        id: 'product',
-        no: '03',
-        title: '产品',
-        tagline: 'ZOOOP',
-        items: [
-          { name: 'ZOOOP', meta: 'AI 原生创作平台', link: 'https://zooop.ai/', slug: 'zooop' },
-        ],
-      },
-      {
-        id: 'graphics',
-        no: '04',
-        title: '个人业余作品',
-        tagline: 'Raymarching · WebGL · Blender',
-        items: [
-          { name: 'Raymarching', slug: 'raymarching' },
-          { name: 'WebGL', slug: 'webgl' },
-          { name: 'Blender', slug: 'blender' },
-          { name: '其他业余作品', slug: 'other-side-works' },
-        ],
+        footer: '录音转文字 · AI 总结 · 分类与状态跟踪 · 本地优先架构',
       },
     ],
   },
@@ -141,66 +116,41 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
     countLabel: (n) => `${n} works`,
     sections: [
       {
-        id: 'ad',
+        id: 'easyai',
         no: '01',
-        title: 'Advertising',
-        tagline: 'HOTSAR · Bad Printer',
+        title: 'EasyAI',
+        tagline: 'AI imaging · global',
         items: [
-          { name: 'Who’s Talking About Guqin', meta: 'Interactive', slug: 'guqin' },
-          { name: 'Lianhe Zaobao · Campus Time Machine', meta: 'Interactive', slug: 'time-machine' },
-          { name: 'Animation Reel', meta: 'Animation', slug: 'animation-collection' },
-          { name: 'Other works', slug: 'other-works' },
+          {
+            name: 'EasyAI Picture',
+            meta: 'AI image generation website',
+            tags: ['Web', 'Global'],
+            link: 'https://easyai-picture.com/',
+            slug: 'easyai-picture',
+          },
+          {
+            name: 'EasyAI: AI Images',
+            meta: 'iOS app · on the App Store',
+            tags: ['iOS', 'App Store'],
+            slug: 'easyai-ios',
+          },
         ],
-        awards: ['Tiger Roar', 'FWA', 'Awwwards'],
+        footer: 'Market research · product planning · UI/UX · full-stack dev · AI integration · pricing · SEO & growth',
       },
       {
-        id: 'maker',
+        id: 'starift',
         no: '02',
-        title: 'Content Creator',
-        tagline: '230K followers',
+        title: '星拾 Starift',
+        tagline: 'Voice-first · local-first',
         items: [
           {
-            name: '“I Turned the Studio’s Glass Wall into a Game Console”',
-            meta: '17M views',
-            tags: ['Bilibili Weekly Picks', 'Bilibili Trending'],
-            slug: 'glass-wall-arcade',
+            name: '星拾 · Starift',
+            meta: 'Personal inspiration capture app · iOS',
+            tags: ['iOS', 'Voice-first', 'Local-first'],
+            slug: 'starift',
           },
-          {
-            name: '“I Wrote Code into My Dog’s Clothes”',
-            meta: '9M views',
-            tags: ['Trending on Weibo / Douyin / Bilibili'],
-            slug: 'dog-code-clothes',
-          },
-          {
-            name: '“I Made a 10× Switch into a Smart Cat House”',
-            meta: '5M views',
-            tags: ['Bilibili Weekly Picks'],
-            slug: 'switch-cat-house',
-          },
-          { name: '“We Got Married in an 80s Famicom Game!!”', slug: 'retro-game-wedding' },
         ],
-        footer: 'Tech: 3D modeling · 3D printing · PCB design · embedded · software · motion graphics',
-      },
-      {
-        id: 'product',
-        no: '03',
-        title: 'Products',
-        tagline: 'ZOOOP',
-        items: [
-          { name: 'ZOOOP', meta: 'AI-native creation platform', link: 'https://zooop.ai/', slug: 'zooop' },
-        ],
-      },
-      {
-        id: 'graphics',
-        no: '04',
-        title: 'Side Projects',
-        tagline: 'Raymarching · WebGL · Blender',
-        items: [
-          { name: 'Raymarching', slug: 'raymarching' },
-          { name: 'WebGL', slug: 'webgl' },
-          { name: 'Blender', slug: 'blender' },
-          { name: 'Other side projects', slug: 'other-side-works' },
-        ],
+        footer: 'Speech-to-text · AI summaries · categories & status tracking · local-first architecture',
       },
     ],
   },
@@ -209,10 +159,8 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
 // 板块配图（横向画廊每张卡片左侧的整高封面）。放到 public/works/covers/ 下。
 // 缺图时左栏用大编号渐变占位，放入图片后自动点亮。
 export const SECTION_COVERS: Record<string, string> = {
-  ad: `${import.meta.env.BASE_URL}works/covers/ad.jpg`,
-  maker: `${import.meta.env.BASE_URL}works/covers/maker.jpg`,
-  product: `${import.meta.env.BASE_URL}works/covers/product.jpg`,
-  graphics: `${import.meta.env.BASE_URL}works/covers/graphics.jpg`,
+  easyai: `${import.meta.env.BASE_URL}works/covers/easyai.png`,
+  starift: `${import.meta.env.BASE_URL}works/covers/starift.png`,
 }
 
 // 统计一个板块的作品数（items 或 groups 求和），用于索引行 hover 显示

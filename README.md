@@ -1,4 +1,4 @@
-<h1 align="center">About Sen · 3D 个人简历</h1>
+<h1 align="center">About DD · 3D 个人简历</h1>
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/code-MIT-blue.svg?style=flat" alt="License MIT"></a>
@@ -219,5 +219,5 @@ React 18 · TypeScript · @react-three/fiber · @react-three/drei · @react-thre
 ## 许可与版权
 
 - **代码**：[MIT](LICENSE)。
-- **个人内容与素材**：© Sen Zheng（SEN），保留所有权利，**不在 MIT 范围内**，详见 [`NOTICE`](NOTICE)。fork 后请替换成你自己的姓名、模型、简历、作品与 logo。
+- **个人内容与素材**：© DD，保留所有权利，**不在 MIT 范围内**，详见 [`NOTICE`](NOTICE)。fork 后请替换成你自己的姓名、模型、简历、作品与 logo。
 - **第三方素材**（字体 / HDR）：请各自核对其原始许可后再分发。

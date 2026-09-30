@@ -3,24 +3,6 @@ import { ZooopLogo } from './ZooopLogo'
 import { SOCIAL_ICONS } from './SocialIcons'
 import { FOCUS_POINTS } from '../data/focusPoints'
 
-const SOCIAL_LINKS = [
-  {
-    id: 'douyin',
-    label: '抖音',
-    href: 'https://www.douyin.com/user/MS4wLjABAAAAlmQDgHf0NlbsjrfWENm8LyrIikxSRRq7mzlzQSIStQJkV7Ju52B6A55zw5TUDU5d',
-  },
-  {
-    id: 'bilibili',
-    label: 'B站',
-    href: 'https://space.bilibili.com/275344092?spm_id_from=333.937.0.0',
-  },
-  {
-    id: 'xiaohongshu',
-    label: '小红书',
-    href: 'https://www.xiaohongshu.com/user/profile/5ceba8c8000000000502fd69',
-  },
-]
-
 // 履历数据（双语）。英文为译稿，可按需润色。
 interface ResumeGroup {
   heading?: string
@@ -44,49 +26,65 @@ const RESUME: Record<'en' | 'zh', { title: string; entries: ResumeEntry[] }> = {
     title: 'Résumé',
     entries: [
       {
-        period: '2013 – 2017',
-        place: 'Sun Yat-sen University',
-        role: 'B.S. in Software Engineering',
-      },
-      {
-        period: '2017 – 2020',
-        place: 'HOTSAR Studio · Shanghai',
-        role: 'Co-founder',
-        logo: { src: `${import.meta.env.BASE_URL}images/hotsar.jpg`, alt: 'HOTSAR' },
+        period: '2018 – 2020',
+        place: 'Military Service',
+        role: 'Signal Operator / Computer Operator',
         points: [
-          'Co-founder · team of 20+',
-          'Clients: Alibaba brands, Tencent, NetEase, DiDi, China Resources, McDonald’s…',
-          'Work: development / creative direction / animation / team management',
+          'First touch of tech: computers & networks, self-taught Python / C++',
+          'Discipline, execution and responsibility forged in service',
         ],
       },
       {
-        period: '2020 – 2025',
-        place: 'Bad Printer Studio · Shenzhen',
-        role: 'Founder',
-        logo: { src: `${import.meta.env.BASE_URL}images/bp.png`, alt: 'Bad Printer Studio' },
+        period: '2022 – 2023',
+        place: 'Mingchuang Studio · Campus',
+        role: 'Founder / Lead',
         points: [
-          'Founder · team of 14',
-          'Clients: Honor of Kings / Trip.com / ByteDance / Kuaishou / VIVO / Tecno / Xiaomi / IM Motors…',
-          'Work: team management / creative direction / animation / development',
+          'Built & led an 8-person dev team from 0 to 1',
+          'Designed the architecture & core backend of the campus research system',
+          'First full cycle: requirements → teamwork → development → delivery',
         ],
       },
       {
-        period: '2025 – Now',
-        place: 'Content Creator',
+        period: '2023 – 2024',
+        place: 'Java Backend Development',
+        role: 'Java Backend Developer',
+        points: [
+          'Requirements analysis, technical design & delivery — responsible for backend business logic, APIs and database design',
+          'Shifted from “completing dev tasks” to understanding product, business and system architecture',
+        ],
+      },
+      {
+        period: '2024 – Now',
+        place: 'Full-stack / AI Products',
+        role: 'Full-stack Developer',
+        points: [
+          'Front & back end, BI analytics, AI productization in real business',
+          'Solo or core builder of multiple AI products, end to end',
+          'AI products generated 2M+ RMB in revenue so far',
+        ],
+      },
+      {
+        period: '2025.12 – Now',
+        place: 'Indie Developer / AI Native Builder',
         groups: [
           {
-            heading: '小郑还挺忙',
-            logoImg: `${import.meta.env.BASE_URL}images/buzyzheng.png`,
-            sub: 'tech-DIY creator',
-            items: ['120K on Douyin · 87K on Bilibili · 23K on Xiaohongshu'],
-            links: SOCIAL_LINKS,
+            heading: 'EasyAI Picture',
+            sub: 'AI image generation website',
+            link: 'https://easyai-picture.com/',
+          },
+          {
+            heading: 'EasyAI: AI Images',
+            sub: 'iOS app, live on the App Store',
+          },
+          {
+            heading: '星拾 · Starift',
+            sub: 'Voice-first inspiration capture app',
+          },
+          {
+            heading: 'Solo = a whole team',
+            sub: 'market · design · code · launch · pricing · growth',
           },
         ],
-      },
-      {
-        period: '2026 – Now',
-        place: 'Indie Developer',
-        groups: [{ logo: 'zooop', sub: 'AI creation platform', link: 'https://zooop.ai/' }],
       },
     ],
   },
@@ -94,49 +92,68 @@ const RESUME: Record<'en' | 'zh', { title: string; entries: ResumeEntry[] }> = {
     title: 'Résumé',
     entries: [
       {
-        period: '2013 – 2017',
-        place: '中山大学',
-        role: '软件工程 · 本科',
-      },
-      {
-        period: '2017 – 2020',
-        place: 'HOTSAR 工作室 · 上海',
-        role: '联合创始人',
-        logo: { src: `${import.meta.env.BASE_URL}images/hotsar.jpg`, alt: 'HOTSAR' },
+        period: '2018 – 2020',
+        place: '军旅生涯',
+        role: '通信兵 / 计算机操作员',
         points: [
-          '联合创始人，团队人数 20+',
-          '服务客户：阿里系品牌、腾讯、网易、滴滴、华润、麦当劳…',
-          '负责：技术开发 / 创意策划 / 动画制作 / 团队管理',
+          '技术起点：系统接触计算机与网络，业余自学 Python / C++',
+          '军旅淬炼出的执行力、自律性与责任意识',
         ],
       },
       {
-        period: '2020 – 2025',
-        place: '坏打印机工作室 · 深圳',
-        role: '创始人',
-        logo: { src: `${import.meta.env.BASE_URL}images/bp.png`, alt: '坏打印机工作室' },
+        period: '2022 – 2023',
+        place: '铭创工作室 · 校级项目',
+        role: '创始人 / 负责人',
         points: [
-          '创始人，团队人数 14',
-          '服务客户：王者荣耀 / 携程 / 字节 / 快手 / VIVO / 传音 / 小米…',
-          '负责：团队管理 / 创意策划 / 动画制作 / 技术开发',
+          '从 0 到 1 组建并带领 8 人开发团队',
+          '主导科研管理系统架构与核心后端开发',
+          '第一次完整走通需求 → 协作 → 开发 → 交付',
         ],
       },
       {
-        period: '2025 – 至今',
-        place: '自媒体博主',
+        period: '2023 – 2024',
+        place: 'Java 后端开发',
+        role: 'Java 后端开发',
+        points: [
+          '参与需求分析、技术方案设计与功能落地，负责后端业务逻辑、接口及数据库设计',
+          '开始从“完成开发任务”转向理解产品、业务与系统整体架构',
+        ],
+      },
+      {
+        period: '2024 – 至今',
+        place: '全栈 / AI 产品',
+        role: '全栈开发工程师',
+        points: [
+          '前后端 + BI 数据分析 + AI 能力产品化落地',
+          '独立或核心参与多个 AI 产品全栈开发',
+          '参与建设的 AI 产品累计营收 200W+',
+        ],
+      },
+      {
+        period: '2025.12 – 至今',
+        place: '独立开发 / AI Native Builder',
         groups: [
           {
-            heading: '小郑还挺忙',
-            logoImg: `${import.meta.env.BASE_URL}images/buzyzheng.png`,
-            sub: '科技 DIY 博主',
-            items: ['抖音 12 万 · B站 8.7 万 · 小红书 2.3 万 关注'],
-            links: SOCIAL_LINKS,
+            heading: 'EasyAI Picture',
+            sub: 'AI 图片生成网站',
+            logoImg: `${import.meta.env.BASE_URL}images/easyai-logo.png`,
+            link: 'https://easyai-picture.com/',
+          },
+          {
+            heading: 'EasyAI: AI Images',
+            sub: 'iOS App · 已上架 App Store',
+            logoImg: `${import.meta.env.BASE_URL}images/easyai-app.png`,
+          },
+          {
+            heading: '星拾 · Starift',
+            sub: '语音优先的个人灵感捕捉 App',
+            logoImg: `${import.meta.env.BASE_URL}images/starift-logo.png`,
+          },
+          {
+            heading: '一个人 = 一支团队',
+            sub: '市场 · 设计 · 开发 · 上线 · 定价 · 增长',
           },
         ],
-      },
-      {
-        period: '2026 – 至今',
-        place: '独立开发',
-        groups: [{ logo: 'zooop', sub: 'AI 创作平台', link: 'https://zooop.ai/' }],
       },
     ],
   },

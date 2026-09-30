@@ -24,15 +24,15 @@ type Lang = 'en' | 'zh'
 
 const COPY = {
   en: {
-    title: 'About Sen',
+    title: 'About DD',
     paragraphs: [
-      "I'm Sen — a creative technologist living where code meets art. I spend my days around coding, creativity, playful interaction & design, and CG work. I love studying and combining skills across different fields — to create, and to explore more possibilities.",
+      "AI-native developer & indie builder. I started coding as an army signal operator, went from Java backend to full-stack and AI products — now focused on building my own AI products, and documenting the whole journey from idea, design and development to launch and growth.",
     ],
   },
   zh: {
-    title: 'About Sen',
+    title: 'About DD',
     paragraphs: [
-      '我是 Sen——一个游走在代码与艺术之间的创意技术人。我常年和 Coding、创意、有趣的交互 & 设计、CG 创作等打交道，喜欢研究并组合不同领域的技能，来创造并探索更多可能性。',
+      'AI Native Developer / 独立开发者。技术起点在军旅——当通信兵时自学编程，此后从 Java 后端走向全栈与 AI 产品。现在专注打造自己的 AI 产品，并持续记录产品从想法、设计、开发、上线到增长的全过程。',
     ],
   },
 }
@@ -170,7 +170,7 @@ export default function App() {
         <span className="hero-mark bl">+</span>
         <span className="hero-mark br">+</span>
         <div className="hero-meta hm-tl">
-          <span className="hm-name">Sen Zheng 郑越升</span>
+          <span className="hm-name">DD</span>
           <span>Creative Technologist</span>
         </div>
         <div className="hero-meta hm-tr">Portfolio — 2026</div>

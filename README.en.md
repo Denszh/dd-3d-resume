@@ -1,4 +1,4 @@
-<h1 align="center">About Sen · 3D Personal Résumé</h1>
+<h1 align="center">About DD · 3D Personal Résumé</h1>
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/code-MIT-blue.svg?style=flat" alt="License MIT"></a>
@@ -219,5 +219,5 @@ React 18 · TypeScript · @react-three/fiber · @react-three/drei · @react-thre
 ## License & Copyright
 
 - **Code:** [MIT](LICENSE).
-- **Personal content and assets:** © Sen Zheng (SEN), all rights reserved, **not covered by MIT** — see [`NOTICE`](NOTICE). After forking, replace the name, model, résumé, works, and logos with your own.
+- **Personal content and assets:** © DD, all rights reserved, **not covered by MIT** — see [`NOTICE`](NOTICE). After forking, replace the name, model, résumé, works, and logos with your own.
 - **Third-party assets** (fonts / HDR): check their original licenses before redistributing.
