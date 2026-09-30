@@ -17,3 +17,6 @@ blender/me-realistic-backup.glb
 
 # 历史版本模型备份（本地保留，不入库）
 blender/me-versions/
+
+# wrangler 本地缓存（不入库）
+.wrangler/
