@@ -14,3 +14,6 @@ deploy/
 
 # 大体积模型备份（本地保留，不入库）
 blender/me-realistic-backup.glb
+
+# 历史版本模型备份（本地保留，不入库）
+blender/me-versions/
