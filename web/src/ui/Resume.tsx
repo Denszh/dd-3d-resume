@@ -143,6 +143,7 @@ const RESUME: Record<'en' | 'zh', { title: string; entries: ResumeEntry[] }> = {
             heading: 'EasyAI: AI Images',
             sub: 'iOS App · 已上架 App Store',
             logoImg: `${import.meta.env.BASE_URL}images/easyai-app.png`,
+            link: 'https://apps.apple.com/us/app/easyai-picture-ai-images/id6790090871',
           },
           {
             heading: '星拾 · Starift',
