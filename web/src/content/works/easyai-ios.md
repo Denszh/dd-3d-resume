@@ -1,8 +1,8 @@
 ---
-title: EasyAI: AI Images
+title: EasyAI Picture: AI Images
 year: 2025
 role: 独立开发 · 全栈
-tags: [iOS, App Store]
+tags: [iOS, App Store, 海外市场]
 link: https://apps.apple.com/us/app/easyai-picture-ai-images/id6790090871
 ---
 
