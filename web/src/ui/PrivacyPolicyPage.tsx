@@ -40,7 +40,7 @@ export default function PrivacyPolicyPage() {
             <h2>系统权限</h2>
             <p>麦克风、语音识别、照片、相机、日历、提醒事项和通知权限仅在你使用相关功能时请求。你可以随时在 iOS“设置”中更改权限。</p>
             <h2>联系我们</h2>
-            <p>如有隐私相关问题，请通过 <a href="mailto:support-starift@dengzh.site">support-starift@dengzh.site</a> 联系我们，也可以访问 <a href="/support">支持页面</a>。</p>
+            <p>如有隐私相关问题，请通过 <a href="mailto:starift-support@dengzh.site">starift-support@dengzh.site</a> 联系我们，也可以访问 <a href="/support">支持页面</a>。</p>
             <p className="privacy-updated">我们可能会在应用功能或适用要求变化时更新本政策，并在本页面公布更新版本。</p>
           </article>
         ) : (
@@ -57,7 +57,7 @@ export default function PrivacyPolicyPage() {
             <h2>System permissions</h2>
             <p>Microphone, Speech Recognition, Photos, Camera, Calendar, Reminders, and Notifications permissions are requested only when you use the related feature. You can change permissions at any time in iOS Settings.</p>
             <h2>Contact</h2>
-            <p>For privacy questions, contact us at <a href="mailto:support-starift@dengzh.site">support-starift@dengzh.site</a> or visit the <a href="/support">support page</a>.</p>
+            <p>For privacy questions, contact us at <a href="mailto:starift-support@dengzh.site">starift-support@dengzh.site</a> or visit the <a href="/support">support page</a>.</p>
             <p className="privacy-updated">We may update this policy as app features or applicable requirements change. Updates will be posted on this page.</p>
           </article>
         )}
