@@ -519,10 +519,10 @@ function Post2({
     bloomIntensity: 0.6,
     bloomThreshold: 0.82,
     dof: true,
-    startBokeh: 7.4,
-    startRange: 2.0,
-    focusBokeh: 11.0,
-    focusRange: 0.15,
+    startBokeh: 1.2,
+    startRange: 2.4,
+    focusBokeh: 1.6,
+    focusRange: 0.5,
     startBlendFrame: 48,
     endBlendFrame: RESUME_FRAMES - 50, // 末节点附近回到"起始帧"景深档（原 250−50=200）
   }
