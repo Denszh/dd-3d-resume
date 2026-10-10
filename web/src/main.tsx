@@ -19,6 +19,14 @@ const routes: Record<string, 'home' | 'starift' | 'support' | 'privacy'> = {
 const page = routes[path] ?? 'home'
 const productPrefix: '/starift' | '' = path.startsWith('/starift/') ? '/starift' : ''
 
+if (productPrefix) {
+  const favicon = document.createElement('link')
+  favicon.rel = 'icon'
+  favicon.type = 'image/png'
+  favicon.href = `${import.meta.env.BASE_URL}images/starift-logo.png`
+  document.head.append(favicon)
+}
+
 if (page === 'home') document.title = 'About DD'
 
 createRoot(document.getElementById('root')!).render(
