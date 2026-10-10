@@ -2,7 +2,7 @@
 
 ## Goal
 
-Add a bilingual Starift product website to the existing `dengzh.size` personal portfolio site, served at `/starift/app`. Keep the 3D résumé at `/`, and make the existing Starift support and privacy pages reachable under both their current paths and new product-scoped paths. The website should explain the product clearly and lead visitors to the App Store.
+Add a bilingual Starift product website to the existing `dengzh.site` personal portfolio site, served at `/starift/app`. Keep the 3D résumé at `/`, and make the existing Starift support and privacy pages reachable under both their current paths and new product-scoped paths. The website should explain the product clearly and lead visitors to the App Store.
 
 ## Approved direction
 
