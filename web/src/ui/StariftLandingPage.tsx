@@ -80,9 +80,9 @@ export default function StariftLandingPage() {
     <div className="starift-site" lang={language}>
       <header className="starift-nav-shell">
         <nav className="starift-nav" aria-label={isChinese ? '主导航' : 'Main navigation'}>
-          <a className="starift-brand" href="/starift/app" aria-label="Starift home">
-            <span className="starift-brand-mark" aria-hidden="true">✦</span>
-            <span>Starift</span>
+          <a className="starift-brand" href="/starift/app" aria-label={`${isChinese ? '星拾' : 'Starift'} home`}>
+            <img className="starift-brand-icon" src="/images/starift-logo.png" alt="" aria-hidden="true" />
+            <span>{isChinese ? '星拾' : 'Starift'}</span>
           </a>
 
           <div className="starift-nav-links">
@@ -190,7 +190,10 @@ export default function StariftLandingPage() {
       </main>
 
       <footer className="starift-footer">
-        <a className="starift-footer-brand" href="/starift/app"><span aria-hidden="true">✦</span> Starift</a>
+        <a className="starift-footer-brand" href="/starift/app">
+          <img src="/images/starift-logo.png" alt="" aria-hidden="true" />
+          {isChinese ? '星拾' : 'Starift'}
+        </a>
         <div className="starift-footer-links">
           <a href="/starift/support">{copy.footer.support}</a>
           <a href="/starift/privacy">{copy.footer.privacy}</a>

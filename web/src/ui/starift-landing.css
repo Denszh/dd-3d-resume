@@ -55,16 +55,12 @@
   letter-spacing: -0.035em;
 }
 
-.starift-brand-mark,
-.starift-footer-brand span {
-  display: grid;
-  width: 29px;
-  height: 29px;
-  place-items: center;
-  border-radius: 10px;
-  color: var(--starift-blue);
-  background: #eaf1ff;
-  font-size: 17px;
+.starift-brand-icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  object-fit: cover;
 }
 
 .starift-nav-links,
@@ -481,10 +477,12 @@
   font-size: 14px;
 }
 
-.starift-footer-brand span {
+.starift-footer-brand img {
+  display: block;
   width: 24px;
   height: 24px;
-  font-size: 14px;
+  border-radius: 7px;
+  object-fit: cover;
 }
 
 .starift-footer-links {
