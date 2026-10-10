@@ -26,12 +26,12 @@ The old paths are aliases, not redirects, so existing App Store metadata and ext
 ## Landing page structure
 
 1. **Navigation:** Starift wordmark, in-page feature navigation, Support, Privacy, and an `EN / 中文` language control.
-2. **Hero:** “Capture the spark. Keep the idea.” / localized equivalent, short value statement, prominent App Store CTA (`https://apps.apple.com/us/app/%E6%98%9F%E6%8B%BE/id6812587855`), and the Idea Vault visual.
+2. **Hero:** “Capture the spark. Keep the idea.” / localized equivalent, short value statement, prominent localized App Store product-page CTA, and the Idea Vault visual.
 3. **Capture and revisit:** Explain capturing and finding ideas again, illustrated by the Today screen.
 4. **AI summary:** Explain turning a spoken idea into key points and next steps, illustrated by the AI Summary screen.
 5. **Visible progress:** Show idea history and progress, illustrated by the progress/statistics screen.
 6. **Widgets:** Show quick capture and at-a-glance progress, illustrated by the widget screen.
-7. **Closing CTA and footer:** Repeat the App Store CTA and link to the new support and privacy paths. Include a link back to the personal site if it fits without competing with the product CTA.
+7. **Closing CTA and footer:** Repeat the localized App Store product-page CTA and link to the new support and privacy paths. Include a link back to the personal site if it fits without competing with the product CTA.
 
 The agreed story order is independent of the source filenames' numeric order: capture/revisit precedes AI summary on the website.
 

@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "typecheck": "tsc -b",
     "lint": "eslint .",
-    "deploy:cf": "npm run build && npx wrangler pages deploy dist --project-name dd-3d-resume --branch main --commit-dirty=true"
+    "deploy:cf": "VITE_BASE_PATH=/ npm run build && npx wrangler pages deploy dist --project-name dd-3d-resume --branch main --commit-dirty=true"
   },
   "dependencies": {
     "@react-three/drei": "^9.114.0",

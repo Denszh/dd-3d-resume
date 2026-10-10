@@ -7,6 +7,7 @@
 //   role    角色 / 担当
 //   tags    标签数组：[互动项目, 虎啸奖]
 //   link    外链（“访问作品”按钮）
+//   website 官网地址（“访问官网”按钮）
 // 正文（frontmatter 之后）写 markdown：文字 / 图 ![](...) / 视频 <video src=...>。
 //
 // 资源（图/视频）放到 public/works/ 下，用 /works/... 绝对路径引用。
@@ -20,6 +21,7 @@ export interface WorkDoc {
   role?: string
   tags?: string[]
   link?: string
+  website?: string
   body: string
 }
 

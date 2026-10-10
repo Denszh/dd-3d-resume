@@ -2,7 +2,9 @@
 title: 星拾 · Starift
 year: 2025
 role: 独立开发 · 全栈
-tags: [iOS, 语音优先, 本地优先]
+tags: [iOS, App Store, 语音优先, 本地优先]
+link: https://apps.apple.com/us/app/%E6%98%9F%E6%8B%BE/id6812587855
+website: https://dengzh.size/starift/app
 ---
 
 一款**语音优先、本地优先**的个人灵感捕捉 App——主要解决开车、走路等不方便打字时，快速记录转瞬即逝想法的问题。

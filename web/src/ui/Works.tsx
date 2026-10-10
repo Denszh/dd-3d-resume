@@ -128,6 +128,7 @@ function WorkDetail({
   const banner = doc && doc.banner
   // 有 md 详情时展示完整信息；无 md 时详情页只保留标题 + 统一占位文案
   const link = doc ? doc.link || item.link : null
+  const website = doc ? doc.website || item.website : item.website
   const tags = doc ? doc.tags || item.tags : null
   // 副标题不含年份；标签单独做 badge 展示
   const sub = doc ? [item.meta, doc.role].filter(Boolean).join('  ·  ') : ''
@@ -197,15 +198,19 @@ function WorkDetail({
             </>
           )}
 
-          {link && (
-            <a
-              className="wk-detail-link"
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {data.visitLabel} <span aria-hidden="true">↗</span>
-            </a>
+          {(website || link) && (
+            <div className="wk-detail-actions">
+              {website && (
+                <a className="wk-detail-link" href={website} target="_blank" rel="noopener noreferrer">
+                  {data.websiteLabel} <span aria-hidden="true">↗</span>
+                </a>
+              )}
+              {link && (
+                <a className="wk-detail-link" href={link} target="_blank" rel="noopener noreferrer">
+                  {data.visitLabel} <span aria-hidden="true">↗</span>
+                </a>
+              )}
+            </div>
           )}
         </article>
       </motion.div>

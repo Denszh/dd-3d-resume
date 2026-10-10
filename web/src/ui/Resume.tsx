@@ -78,7 +78,8 @@ const RESUME: Record<'en' | 'zh', { title: string; entries: ResumeEntry[] }> = {
           },
           {
             heading: '星拾 · Starift',
-            sub: 'Voice-first inspiration capture app',
+            sub: 'Voice-first inspiration capture app · live on the App Store',
+            link: 'https://apps.apple.com/us/app/%E6%98%9F%E6%8B%BE/id6812587855',
           },
           {
             heading: 'Solo = a whole team',
@@ -147,8 +148,9 @@ const RESUME: Record<'en' | 'zh', { title: string; entries: ResumeEntry[] }> = {
           },
           {
             heading: '星拾 · Starift',
-            sub: '语音优先的个人灵感捕捉 App',
+            sub: '语音优先的个人灵感捕捉 App · 已上架 App Store',
             logoImg: `${import.meta.env.BASE_URL}images/starift-logo.png`,
+            link: 'https://apps.apple.com/us/app/%E6%98%9F%E6%8B%BE/id6812587855',
           },
           {
             heading: '一个人 = 一支团队',

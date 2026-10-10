@@ -1,5 +1,6 @@
 import type { SVGProps } from 'react'
-import { useState } from 'react'
+import { useEffect } from 'react'
+import { useStariftLanguage } from './starift/useStariftLanguage'
 
 function DiscordIcon(props: SVGProps<SVGSVGElement>) {
   return (
@@ -21,21 +22,26 @@ function MailIcon(props: SVGProps<SVGSVGElement>) {
   )
 }
 
-export default function SupportPage() {
-  const [language, setLanguage] = useState<'zh' | 'en'>(() =>
-    navigator.language.toLowerCase().startsWith('zh') ? 'zh' : 'en',
-  )
-  const copy = language === 'zh'
+export default function SupportPage({ productPrefix = '' }: { productPrefix?: '/starift' | '' }) {
+  const { language, setLanguage } = useStariftLanguage()
+  const copy = language === 'zh-Hans'
+  const appHref = productPrefix ? `${productPrefix}/app` : '/'
+  const privacyHref = `${productPrefix}/privacy`
+
+  useEffect(() => {
+    document.title = copy ? '支持 · 星拾' : 'Support · Starift'
+    document.documentElement.lang = language
+  }, [copy, language])
 
   return (
     <main className="support-page" lang={copy ? 'zh-Hans' : 'en'}>
       <div className="support-shell">
         <div className="support-topbar">
-          <a className="support-back" href="/" aria-label={copy ? '返回主页' : 'Back to home'}>
+          <a className="support-back" href={appHref} aria-label={copy ? (productPrefix ? '返回星拾官网' : '返回主页') : (productPrefix ? 'Back to Starift' : 'Back to home')}>
           <span aria-hidden="true">‹</span>
           </a>
           <div className="support-language" aria-label={copy ? '选择语言' : 'Choose language'}>
-            <button type="button" aria-pressed={copy} onClick={() => setLanguage('zh')}>中文</button>
+            <button type="button" aria-pressed={copy} onClick={() => setLanguage('zh-Hans')}>中文</button>
             <span aria-hidden="true">/</span>
             <button type="button" aria-pressed={!copy} onClick={() => setLanguage('en')}>EN</button>
           </div>
@@ -72,7 +78,7 @@ export default function SupportPage() {
             <p>{copy ? '使用微信扫描二维码加入正式群聊。二维码有效期有限，失效后请回到此页面获取最新二维码。' : 'Scan the QR code with WeChat to join the community. The code expires; return here for an updated one if needed.'}</p>
           </div>
           <div className="support-qr-wrap">
-            <img src="/support/wechat-group.png" alt="星拾会员群微信二维码" className="support-qr" />
+            <img src={`${import.meta.env.BASE_URL}support/wechat-group.png`} alt="星拾会员群微信二维码" className="support-qr" />
             <p>{copy ? '星拾会员群 · 正式群聊' : 'Starift community · Official group'}</p>
           </div>
         </section>
@@ -91,7 +97,8 @@ export default function SupportPage() {
         </section>
 
         <footer className="support-footer">
-          <a href="/privacy">{copy ? '隐私政策' : 'Privacy Policy'}</a>
+          <a href={privacyHref}>{copy ? '隐私政策' : 'Privacy Policy'}</a>
+          {productPrefix && <a href={appHref}>{copy ? '星拾官网' : 'Starift'}</a>}
           <span>© {new Date().getFullYear()} Starift · dengzh.site</span>
         </footer>
       </div>

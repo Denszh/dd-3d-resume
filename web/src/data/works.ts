@@ -18,6 +18,7 @@ export interface WorkListItem {
   meta?: string
   tags?: string[]
   link?: string
+  website?: string
   slug?: string
 }
 
@@ -44,6 +45,7 @@ export interface WorksLang {
   hint: string
   awardsLabel: string
   visitLabel: string
+  websiteLabel: string
   detailPlaceholder: string
   phImageLabel: string
   phButtonLabel: string
@@ -59,6 +61,7 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
     hint: '继续下滑',
     awardsLabel: '获奖',
     visitLabel: '访问作品',
+    websiteLabel: '访问官网',
     detailPlaceholder: '你的作品介绍',
     phImageLabel: '图片 / 视频',
     phButtonLabel: '跳转按钮',
@@ -95,8 +98,10 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
         items: [
           {
             name: '星拾 · Starift',
-            meta: '个人灵感捕捉 App · iOS',
-            tags: ['iOS', '语音优先', '本地优先'],
+            meta: '个人灵感捕捉 App · iOS · 已上架 App Store',
+            tags: ['iOS', 'App Store', '语音优先', '本地优先'],
+            link: 'https://apps.apple.com/us/app/%E6%98%9F%E6%8B%BE/id6812587855',
+            website: 'https://dengzh.size/starift/app',
             slug: 'starift',
           },
         ],
@@ -111,6 +116,7 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
     hint: 'Keep scrolling',
     awardsLabel: 'Awards',
     visitLabel: 'Visit site',
+    websiteLabel: 'Visit website',
     detailPlaceholder: 'Your work description',
     phImageLabel: 'Image / Video',
     phButtonLabel: 'Link button',
@@ -147,8 +153,10 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
         items: [
           {
             name: '星拾 · Starift',
-            meta: 'Personal inspiration capture app · iOS',
-            tags: ['iOS', 'Voice-first', 'Local-first'],
+            meta: 'Personal inspiration capture app · iOS · on the App Store',
+            tags: ['iOS', 'App Store', 'Voice-first', 'Local-first'],
+            link: 'https://apps.apple.com/us/app/%E6%98%9F%E6%8B%BE/id6812587855',
+            website: 'https://dengzh.size/starift/app',
             slug: 'starift',
           },
         ],
