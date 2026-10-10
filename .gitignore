@@ -11,6 +11,7 @@ deploy/
 # Blender 自动备份
 *.blend1
 *.blend2
+*.blend
 
 # 大体积模型备份（本地保留，不入库）
 blender/me-realistic-backup.glb
