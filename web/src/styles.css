@@ -434,6 +434,115 @@ canvas {
   font-size: 0.9rem;
 }
 
+.updates-header {
+  padding-bottom: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.updates-timeline {
+  position: relative;
+  max-width: 54rem;
+  margin: 0 auto;
+  padding: 0 0 0 1.4rem;
+  list-style: none;
+}
+
+.updates-timeline::before {
+  position: absolute;
+  top: 0.65rem;
+  bottom: 2rem;
+  left: 0.31rem;
+  width: 1px;
+  background: linear-gradient(#6079f1, rgba(96, 121, 241, 0.08));
+  content: '';
+}
+
+.updates-entry {
+  position: relative;
+  padding-bottom: 1.5rem;
+}
+
+.updates-entry::before {
+  position: absolute;
+  top: 0.24rem;
+  left: -1.42rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  border: 3px solid #f7f8fc;
+  border-radius: 50%;
+  background: #4f6ff0;
+  box-shadow: 0 0 0 1px rgba(79, 111, 240, 0.2);
+  content: '';
+}
+
+.updates-entry-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.9rem;
+  margin: 0 0 0.85rem;
+  color: #7d8494;
+  font-size: 0.87rem;
+}
+
+.updates-entry-meta span {
+  padding: 0.26rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(90, 112, 231, 0.1);
+  color: #5268d1;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.updates-card {
+  display: block;
+  margin: 0;
+}
+
+.updates-card h2 {
+  margin-top: 0.55rem;
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  letter-spacing: -0.035em;
+}
+
+.updates-summary {
+  margin-top: 0.7rem;
+  color: #6b7080;
+  line-height: 1.7;
+}
+
+.updates-card ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem 1.6rem;
+  margin: 1.6rem 0 0;
+  padding: 1.4rem 0 0;
+  border-top: 1px solid rgba(21, 23, 34, 0.08);
+  list-style: none;
+}
+
+.updates-card li {
+  position: relative;
+  padding-left: 1.15rem;
+  color: #454c5c;
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.updates-card li::before {
+  position: absolute;
+  top: 0.65em;
+  left: 0;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: #7188f4;
+  content: '';
+}
+
+.updates-footer {
+  padding-top: 2.4rem;
+}
+
 @media (max-width: 700px) {
   .support-page {
     padding-inline: 1rem;
@@ -456,6 +565,19 @@ canvas {
 
   .support-qr {
     width: min(100%, 18rem);
+  }
+
+  .updates-timeline {
+    padding-left: 1.1rem;
+  }
+
+  .updates-entry::before {
+    left: -1.12rem;
+  }
+
+  .updates-card ul {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
   }
 }
 

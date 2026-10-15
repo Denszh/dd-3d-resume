@@ -94,6 +94,7 @@ export default function StariftLandingPage() {
           </div>
 
           <div className="starift-nav-actions">
+            <a className="starift-nav-support" href="/starift/updates">{copy.nav.updates}</a>
             <a className="starift-nav-support" href="/starift/support">{copy.nav.support}</a>
             <a className="starift-nav-support" href="/starift/privacy">{copy.nav.privacy}</a>
             <div className="starift-language" role="group" aria-label={isChinese ? '选择语言' : 'Choose language'}>
@@ -195,6 +196,7 @@ export default function StariftLandingPage() {
           {isChinese ? '星拾' : 'Starift'}
         </a>
         <div className="starift-footer-links">
+          <a href="/starift/updates">{copy.footer.updates}</a>
           <a href="/starift/support">{copy.footer.support}</a>
           <a href="/starift/privacy">{copy.footer.privacy}</a>
           <a href="/">{copy.footer.portfolio}</a>
