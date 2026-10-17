@@ -112,9 +112,9 @@ export const stariftSite = {
       title: 'Subscribe or buy once. Choose what works for you.',
       body: 'Start with a low monthly plan, or make a one-time purchase and keep Starift for the long run.',
       cards: [
-        { name: 'Monthly', price: '¥6', unit: '/ month', note: 'A simple way to make capturing a daily habit.' },
-        { name: 'Annual', price: '¥38', unit: '/ year', note: 'About ¥3.17 per month for the long run.', featured: true, badge: 'BEST FOR THE LONG RUN' },
-        { name: 'Lifetime', price: '¥88', unit: '', note: 'One purchase. Keep Starift for good.' },
+        { name: 'Monthly', price: '$9.99', unit: '/ month', note: 'A simple way to make capturing a daily habit.' },
+        { name: 'Annual', price: '$39.99', unit: '/ year', note: 'About $3.33 per month for the long run.', featured: true, badge: 'BEST FOR THE LONG RUN' },
+        { name: 'Lifetime', price: '$89.99', unit: '', note: 'One purchase. Keep Starift for good.' },
       ],
       note: 'Final prices and subscription details are shown in the App Store.',
     },
