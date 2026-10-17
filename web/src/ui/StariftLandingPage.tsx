@@ -121,7 +121,7 @@ export default function StariftLandingPage() {
               <p className="starift-lede">{copy.hero.body}</p>
               <div className="starift-hero-actions">
                 <DownloadButton label={copy.hero.cta} language={language} />
-                <a className="starift-price-chip" href="#pricing"><strong>¥6</strong><span>{copy.hero.monthly}</span><small>¥88 · {copy.hero.lifetime}</small></a>
+                <a className="starift-price-chip" href="#pricing"><strong>{copy.pricing.cards[0].price}</strong><span>{copy.hero.monthly}</span><small>{copy.pricing.cards[2].price} · {copy.hero.lifetime}</small></a>
               </div>
             </div>
 
