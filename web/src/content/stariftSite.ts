@@ -21,7 +21,10 @@ const promoAssets = {
 } as const
 
 export function getStariftAsset(language: StariftLanguage, asset: keyof typeof promoAssets.en) {
-  return `${import.meta.env.BASE_URL}starift/promo/${language}/${promoAssets[language][asset]}`
+  // Chinese promo screenshots are stored in `zh/`, while the UI language
+  // identifier is `zh-Hans`.
+  const assetLanguage = language === 'zh-Hans' ? 'zh' : 'en'
+  return `${import.meta.env.BASE_URL}starift/promo/${assetLanguage}/${promoAssets[language][asset]}`
 }
 
 export const stariftSite = {
